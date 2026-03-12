@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Instagram Sign Up</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#fafafa;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+width:350px;
+}
+
+.signup-box{
+background:white;
+border:1px solid #dbdbdb;
+padding:30px 40px;
+text-align:center;
+}
+
+.logo{
+font-family:cursive;
+font-size:40px;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#8e8e8e;
+font-size:14px;
+margin-bottom:20px;
+}
+
+.facebook-btn{
+background:#0095f6;
+color:white;
+border:none;
+padding:8px;
+width:100%;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+margin-bottom:15px;
+}
+
+.divider{
+display:flex;
+align-items:center;
+margin:15px 0;
+color:#8e8e8e;
+font-size:13px;
+}
+
+.divider::before,
+.divider::after{
+content:"";
+flex:1;
+height:1px;
+background:#dbdbdb;
+}
+
+.divider span{
+margin:0 10px;
+}
+
+form input{
+width:100%;
+padding:9px;
+margin:4px 0;
+border:1px solid #dbdbdb;
+border-radius:4px;
+background:#fafafa;
+}
+
+.info{
+font-size:11px;
+color:#8e8e8e;
+margin-top:10px;
+}
+
+.terms{
+font-size:11px;
+color:#8e8e8e;
+margin:10px 0;
+}
+
+.signup-btn{
+width:100%;
+background:#0095f6;
+border:none;
+color:white;
+padding:8px;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.login-box{
+background:white;
+border:1px solid #dbdbdb;
+text-align:center;
+padding:15px;
+margin-top:10px;
+font-size:14px;
+}
+
+.login-box a{
+color:#0095f6;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="signup-box">
+
+<h1 class="logo">Instagram</h1>
+
+<p class="subtitle">
+Sign up to see photos and videos from your friends.
+</p>
+
+<button class="facebook-btn">Log in with Facebook</button>
+
+<div class="divider">
+<span>OR</span>
+</div>
+
+<form action="/saveform" method="POST">
+
+<input type="text" placeholder="Email" name="email" required>
+
+<input type="text" placeholder="Full Name" name="name" required>
+
+<input type="text" placeholder="Username" name="username" required>
+
+<input type="password" placeholder="Password" name="password" required>
+
+<p class="info">
+People who use our service may have uploaded your contact information to Instagram.
+</p>
+
+<p class="terms">
+By signing up, you agree to our Terms, Privacy Policy and Cookies Policy.
+</p>
+
+<button type="submit" class="signup-btn">Sign up</button>
+
+</form>
+
+</div>
+
+<div class="login-box">
+Have an account? <a href="#">Log in</a>
+</div>
+
+</div>
+
+</body>
+</html>

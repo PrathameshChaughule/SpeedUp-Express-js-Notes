@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+        <title>Employee Form</title>
+
+        <style>
+
+          *{
+            margin:0;
+          padding:0;
+          box-sizing:border-box;
+          font-family:Arial, Helvetica, sans-serif;
+          }
+
+          body{
+            height:100vh;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+          .form-container{
+            width:360px;
+          padding:30px;
+          background:rgba(255,255,255,0.12);
+          backdrop-filter:blur(10px);
+          border-radius:12px;
+          box-shadow:0 10px 30px rgba(0,0,0,0.25);
+          color:white;
+}
+
+          h2{
+            text-align:center;
+          margin-bottom:20px;
+}
+
+          .input-group{
+            margin-bottom:16px;
+}
+
+          label{
+            display:block;
+          margin-bottom:6px;
+          font-size:14px;
+}
+
+          input, select{
+            width:100%;
+          padding:10px;
+          border:none;
+          border-radius:6px;
+          outline:none;
+          font-size:14px;
+}
+
+          .radio-group{
+            display:flex;
+          gap:20px;
+}
+
+          .radio-group label{
+            display:flex;
+          align-items:center;
+          gap:6px;
+}
+
+          button{
+            width:100%;
+          padding:12px;
+          border:none;
+          border-radius:6px;
+          background:#ff7a18;
+          color:white;
+          font-size:16px;
+          cursor:pointer;
+          margin-top:10px;
+}
+
+          button:hover{
+            background:#ff5200;
+}
+
+        </style>
+    </head>
+
+    <body>
+
+      <div class="form-container">
+
+        <h2>Employee Form</h2>
+
+        <form action="/saveform" method="POST">
+
+          <div class="input-group">
+            <label>Employee Name</label>
+            <input type="text" name="empName" placeholder="Enter name" required>
+          </div>
+
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" name="empEmail" placeholder="Enter email" required>
+          </div>
+
+          <div class="input-group">
+            <label>Role</label>
+            <select name="empRole" required>
+              <option value="">Select Role</option>
+              <option value="Developer">Developer</option>
+              <option value="Designer">Designer</option>
+              <option value="Manager">Manager</option>
+              <option value="Tester">Tester</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Is Eligible</label>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="isEligible" value="true" required> Yes
+              </label>
+
+              <label>
+                <input type="radio" name="isEligible" value="false" required> No
+              </label>
+            </div>
+          </div>
+
+          <button type="submit">Submit</button>
+
+        </form>
+
+      </div>
+
+    </body>
+  </html>
